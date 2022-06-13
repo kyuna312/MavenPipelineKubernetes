@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: devops-project
-        image: ahmedsamymahrous/devops-project-image
+        image: mirin312/devops-project-image
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

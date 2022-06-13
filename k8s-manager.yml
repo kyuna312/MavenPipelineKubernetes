@@ -74,7 +74,7 @@
 
     - name: Create new S3 bucket
       aws_s3:
-        bucket: k8s-ahmedsamymahrous
+        bucket: k8s-mirin312
         mode: create
         region: us-east-2
 
@@ -93,10 +93,10 @@
 
 
     - name: Create kubernetes cluster definitions on S3 bucket
-      command: kops create cluster --cloud=aws --zones=us-east-2a --ssh-public-key=/home/ubuntu/.ssh/id_rsa.pub --name=samy.k8s.local --node-size=t2.micro --master-size=t2.medium --state=s3://k8s-ahmedsamymahrous
+      command: kops create cluster --cloud=aws --zones=us-east-2a --ssh-public-key=/home/ubuntu/.ssh/id_rsa.pub --name=samy.k8s.local --node-size=t2.micro --master-size=t2.medium --state=s3://k8s-mirin312
       ignore_errors: yes
 
 
     - name: Create kubernetes cluser
-      command: kops update cluster --name samy.k8s.local --state s3://k8s-ahmedsamymahrous --yes
+      command: kops update cluster --name samy.k8s.local --state s3://k8s-mirin312 --yes
       ignore_errors: yes
